@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My First Google Map</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRJsdvCfs5oWkZ6hb_MPiya7VSXbqf9Rw"></script>
+  <script>
+    function initMap() {
+      var location = {lat: 6.9271, lng: 79.8612}; // Colombo
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 10,
+        center: location
+      });
+
+      var marker = new google.maps.Marker({
+        position: location,
+        map: map
+      });
+    }
+  </script>
+</head>
+<body onload="initMap()">
+  <h2>My Google Map</h2>
+  <div id="map" style="height:500px;width:100%;"></div>
+</body>
+</html>
